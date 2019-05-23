@@ -85,7 +85,15 @@ nav ul li a
 nav ul li a:hover 
   {
   background: #444;
-}
+
+    
+   nav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+     font-size: 17px;}
 
 
 /* styling our footer */
