@@ -1,0 +1,268 @@
+#navigation > ul > li:nth-child(1) > a {
+  background-color: #fff;
+}
+
+.breadcrumbs {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.breadcrumbs a {
+  margin-right: 8px;
+}
+
+.breadcrumbs a img {
+  width: 7px;
+  height: 14px;
+}
+
+.breadcrumbs h1 {
+  font-size: 16px;
+  color: #666;
+  display: inline-block;
+  margin: 30px 0;
+}
+
+.productHolder:hover {
+    opacity: 1;
+}
+
+.productWraper.mainProduct .productHolder {
+  width: 100%;
+  background-color: #fff;
+}
+
+.productWraper.mainProduct .productHolder img {
+  margin: 0 auto;
+}
+
+.productHolderContent {
+  margin-bottom: 55px;
+}
+
+.productInfo {
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.productInfo ul {
+  clear: none;
+}
+
+.productDetailPrice .productPrice {
+  float: right;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.productDetailPrice span {
+  float: left;
+  margin-top: 7px;
+}
+
+.productTransport .productTransportType {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.productQuantity label {
+  font-size: 16px;
+  font-weight: normal;
+  float: left;
+  margin-top: 3px;
+}
+
+.productQuantity input {
+  width: 30px;
+  height: 30px;
+  float: right;
+  border: 1px solid #CCCCCC;
+  text-align: center;
+}
+
+
+.col-xs-12.col-sm-12.col-md-12.col-lg-12 button {
+  display: block;
+  background-color: #5EB09B;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  height: 40px;
+  margin-bottom: 70px;
+}
+
+.recommended {
+  display: table;
+  margin: 0 auto;
+}
+
+.recommended h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 2px solid #ACDACF;
+  display: inline-block;
+  padding-top: 5px;
+  margin: 0 0 30px 0;
+}
+
+.productDetailColor span {
+ float: left;
+}
+
+ .productDetailColor ul {
+  float: right;
+  margin-bottom: 14px;
+}
+
+.productTransport .productTransportTitle {
+  float: left;
+}
+
+.productInfo span,.productInfo label  {
+  min-width: 90px;
+}
+
+ .secondNav .collectionLink a {
+  color: #000;
+  border-top: 2px solid #ACDACF;
+}
+
+ #navigation .homeLink {
+  border-bottom: 2px solid #ACDACF;
+  padding: 5px 0 10px 0;
+}
+
+#mainHeader .topPart {
+  padding: 9px 0;
+  background-color: #F7F7F7;
+}
+
+#mainHeader .topPart a:first-child {
+  float: left;
+}
+
+#mainHeader .topPart a+a {
+  float: right;
+  text-transform: uppercase;
+}
+
+.container, main, .colorHelper,  #product > div > footer, html {
+  background-color: #f7f7f7;
+}
+
+ nav , div#navigation.collapse.navbar-collapse,  nav div.container.clearfix, body {
+  background-color: #fff;
+}
+
+ .container button span.icon-bar {
+  background-color: #000;
+  height: 4px;
+  border-radius: 2px;
+  width: 20px;
+}
+
+.thumbnails {
+  display: none;
+}
+
+footer.mainFooter .container, html {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 400px) {
+ div > main > div > section > div:nth-child(2n+2) > div {
+  margin-right: 0;
+  }
+
+section .productWraper.mainProduct {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 0;
+  margin-bottom: 20px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+   #navigation .homeLink {
+    padding: 15px 0;
+  }
+
+  section .productWraper.mainProduct {
+    float: left;
+  }
+
+  .productHolderContent {
+    float: left;
+    margin-bottom: 35px;
+  }
+
+  .productTransport .productTransportType {
+    float: left;
+  }
+  .productQuantity input {
+    float: left;
+  }
+
+  .productDetailColor ul {
+    float: left;
+  }
+
+
+  .productDetailPrice .productPrice {
+    float: left;
+  }
+
+  .col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+    margin-bottom: 70px;
+  }
+
+
+  .col-xs-12.col-sm-12.col-md-12.col-lg-12 button {
+    width: 165px;
+  }
+
+  .recommended {
+    display: block;
+    float: left;
+    margin-bottom: 40px;
+  }
+
+  .thumbnails {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .thumbnails span {
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+  }
+
+  .thumbnails span img {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .thumbnails span{
+    width: 63px;
+    height: 63px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .thumbnails span {
+    width: 80px;
+    height: 80px;
+  }
+}

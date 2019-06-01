@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Shop</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="product">
+  <header id="mainHeader">
+    <!-- Container -->
+
+    <div class="topPart clearfix">
+      <div class="container">
+        <a href="+3811155555555">+381 11 555 55 555</a>
+        <a href="#">Prijavi se</a>
+      </div>
+    </div>
+    <!-- Container END -->
+  </header>
+  <nav class="navbar">
+    <div class="container clearfix">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
+        <div class="searchPart">
+          <div class="searchBox">
+            <input type="search" name="search" placeholder="Search"><a href="prodavnica.html"><img src="img/search-icon.png" alt="search icon"></a></div>
+          <div class="cartHolder">
+            <a href="#" class="cart" data-toggle="modal" data-target="#myModal">
+            <img src="img/cart-icon.png" alt="cart icon">
+            <span class="shopCart"></span>
+            </a>
+
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Cart</h4>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-cart="clear">Clear Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+      <a class="navbar-brand-large" href="#"><img src="img/logo.png" alt="logo"></a>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav navbar-right list-reset">
+          <li><a href="index.html" class="shopLink">Naslovna</a></li>
+          <li><a href="prodavnica.html" class="homeLink">Prodavnica</a></li>
+          <li><a href="kontakt.html">kontakt</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+    <section class="row" id="product-holder">
+
+      <script type="template" id="my-template">
+      <div class="container">
+
+        <div class="breadcrumbs">
+          <a href="index.html"><img src="img/arrow-back.svg" alt="strelica"></a>
+          <h1>{{productTitle}} {{model}}</h1>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+          <div class="row">
+            <div class="col-sm-5">
+
+              <div class="productWraper mainProduct">
+                <div class="productHolder">
+                  <img id="mainImage" src="img/products/{{imgSrc}}.jpg" alt="" class="hvrbox-layer_bottom img-responsive">
+                </div>
+              </div>
+              <div class="thumbnails" id="divId" onclick="changeImageOnClick(event)">
+                <span><img class="imgStyle" src="img/product1.jpg" alt=""></span>
+                <span><img class="imgStyle" src="img/product2.jpg" alt=""></span>
+                <span><img class="imgStyle" src="img/product3.jpg" alt=""></span>
+                <span><img class="imgStyle" src="img/product4.jpg" alt=""></span>
+                <span><img class="imgStyle" src="img/product5.jpg" alt=""></span>
+
+              </div>
+            </div>
+
+
+            <div class="col-sm-7">
+              <div class="productHolderContent">
+                <h3>{{productTitle}} {{model}}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                  ut aliquip ex ea commodo consequat. </p>
+                <div class="productInfo clearfix">
+
+                  <div class="productDetailColor clearfix">
+                    <span>Boja:</span>
+                    <ul class="list-reset">
+                      <li><a href="#" class="productColor1">boja1</a></li>
+                      <li><a href="#" class="productColor2">boja2</a></li>
+                      <li><a href="#" class="productColor3">boja3</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="productDetailPrice clearfix">
+                    <span>Cena:</span>
+                    <p class="productPrice">{{price}} RSD</p>
+                  </div>
+
+                  <div class="productTransport clearfix">
+                    <span class="productTransportTitle">Dostava:</span>
+                    <span class="productTransportType">Besplatna</span>
+                  </div>
+
+                  <div class="productQuantity clearfix">
+                    <label for="quantity">Količina:</label>
+                    <input type="text" name="quantity" id="quantity" value="1">
+                  </div>
+
+                </div>
+
+              </div>
+              <button type="button" name="button" class="product-item-btn">Ubaci u korpu</button>
+            </div>
+          </div>
+
+        </div>
+
+<div class="container">
+        <a href="#" class="recommended"><h2>Izdvajamo</h2></a></div>
+
+
+        <div class="col-sm-4 col-md-4 col-lg-3">
+          <div class="productWraper">
+            <div class="productHolder">
+              <img src="img/product4.jpg" alt="" class="hvrbox-layer_bottom img-responsive">
+              <div class="overlay">
+                <div class="text"><a href="#"><img src="img/shop-icon.png" alt="shop icon"></a>
+                  <a href="#"><img src="img/view-icon.png" alt="view icon"></a>
+                  <a href="#"><img src="img/like-icon.png" alt="like icon"></a></div>
+              </div>
+            </div>
+            <div class="productInfo clearfix">
+              <p class="productTitle">Ženska bluza <br> Cosmos
+              </p>
+              <p class="productPrice">5.500 RSD</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-3">
+          <div class="productWraper">
+            <div class="productHolder">
+              <img src="img/product10.jpg" alt="" class="hvrbox-layer_bottom img-responsive">
+              <div class="overlay">
+                <div class="text"><a href="#"><img src="img/shop-icon.png" alt="shop icon"></a>
+                  <a href="#"><img src="img/view-icon.png" alt="view icon"></a>
+                  <a href="#"><img src="img/like-icon.png" alt="like icon"></a></div>
+              </div>
+            </div>
+            <div class="productInfo clearfix">
+              <p class="productTitle">Ženska bluza <br> North west
+              </p>
+              <p class="productPrice">4.880 RSD</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-3">
+          <div class="productWraper">
+            <div class="productHolder">
+              <img src="img/product11.jpg" alt="" class="hvrbox-layer_bottom img-responsive">
+              <div class="overlay">
+                <div class="text">
+                  <a href="#"><img src="img/shop-icon.png" alt="shop icon"></a>
+                  <a href="#"><img src="img/view-icon.png" alt="view icon"></a>
+                  <a href="#"><img src="img/like-icon.png" alt="like icon"></a>
+                </div>
+              </div>
+            </div>
+            <div class="productInfo clearfix">
+              <p class="productTitle">Ženska kosulja <br> North west
+              </p>
+              <p class="productPrice">2.100 RSD</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
+          <div class="productWraper">
+            <div class="productHolder">
+              <img src="img/product7.jpg" alt="" class="hvrbox-layer_bottom img-responsive">
+              <div class="overlay">
+                <div class="text"><a href="#"><img src="img/shop-icon.png" alt="shop icon"></a>
+                  <a href="#"><img src="img/view-icon.png" alt="view icon"></a>
+                  <a href="#"><img src="img/like-icon.png" alt="like icon"></a></div>
+              </div>
+            </div>
+            <div class="productInfo clearfix">
+              <p class="productTitle">Ženski duks <br> North west
+              </p>
+              <p class="productPrice">5.880 RSD</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </script>
+
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footerShop col-lg-3 col-md-3 col-sm-3">
+            <h3>Shop</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <a href="info@krojacevaskola.com">info@krojacevaskola.com</a> <br>
+            <a href="+3811155555555">+381 11 555 55 555</a>
+            <p>Nikolaja Ostrovskog 3, Zemun, Srbija</p>
+          </div>
+          <div class="users col-lg-3 col-md-3 col-sm-3 hidden-xs col-lg-offset-1 col-md-offset-1">
+            <h3>Korisnici</h3>
+            <ul class="list-reset">
+              <li><a href="#">Moj nalog</a></li>
+              <li><a href="#">Kako kupiti</a></li>
+              <li><a href="#">Vodič</a></li>
+            </ul>
+          </div>
+
+          <div class="tags col-lg-5 col-md-5 col-sm-6 hidden-xs">
+            <h3>Tagovi</h3>
+            <ul class="list-reset">
+              <li><a href="#">Jakne</a></li>
+              <li><a href="#">Sportska oprema</a></li>
+              <li><a href="#">Jakne</a></li>
+              <li><a href="#">Zimska kolekcija</a></li>
+              <li><a href="#">Haljine</a></li>
+              <li><a href="#">Sportska oprema</a></li>
+              <li><a href="#">Jakne</a></li>
+              <li><a href="#">Sportska oprema</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#mainHeader" id="toTop"></a>
+      </div>
+    </footer>
+  </main>
+  <footer class="mainFooter">
+    <div class="container">
+      <div class="socialLinks">
+        <ul class="list-reset">
+          <li><a href="#"><img src="img/krojacevaskola.png" alt="Krojaceva Skola"></a></li>
+          <li><a href="#"><img src="img/facebook.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="img/twitter.png" alt="Twitter"></a></li>
+          <li><a href="#"><img src="img/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="img/youtube.png" alt="Youtube"></a></li>
+        </ul>
+      </div>
+      <div class="footerNav">
+        <ul class="list-reset">
+          <li><a href="#">O nama</a></li>
+          <li><a href="#">Uslovi korišćenja</a></li>
+          <li><a href="#">Novosti</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/productDetail.js"></script>
+</body>
+
+</html>
